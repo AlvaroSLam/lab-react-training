@@ -10,6 +10,10 @@ import DriverCard from './components/DriverCard'
 
 
 function App() {
+  let creditCardStyle = {
+    display: 'flex',
+    justifyContent: 'space-around'
+  }
   return (
     <div>
       {/* ITERATION 1 */}
@@ -43,6 +47,7 @@ function App() {
       <BoxColor r={128} g={255} b={0} />
 
       {/* ITERATION 5 */}
+      <div style={creditCardStyle}>
         <CreditCard
           type="Visa"
           number="0123456789018845"
@@ -70,7 +75,7 @@ function App() {
           owner="Firstname Lastname"
           bgColor="#ddbb55"
           color="white" />
-
+      </div>
           {/* ITERATION 6 */}
           <Rating>0</Rating>
           <Rating>1.49</Rating>

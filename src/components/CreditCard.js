@@ -3,7 +3,6 @@ import React from 'react';
 
 const CreditCard = (props) => {
     let cardStyle = {
-        // float: 'left',
         backgroundColor : props.bgColor,
         color: props.color,
         width: '300px',
