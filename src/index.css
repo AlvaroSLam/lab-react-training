@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.id-card{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.id-card img {
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.random-box {
+  border: 3px solid black;
+  margin-top: 5px;
+}
