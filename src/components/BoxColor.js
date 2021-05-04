@@ -25,7 +25,7 @@ const BoxColor = (props) => {
 
     let hex = RGBToHex(props.r, props.g, props.b)
     return (
-        <div style={boxStyle}>
+        <div className="box" style={boxStyle}>
             rgb({props.r}, {props.g}, {props.b}) 
             <br />
             {hex}

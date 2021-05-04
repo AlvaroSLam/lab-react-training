@@ -1,27 +1,27 @@
-
 import React from 'react';
 
-const Greetings = (props) => {
-    let greeting = "";
-    switch (props.lang){
-        case "de":
-            greeting = "Hallo";
-            break;
-        case "fr":
-            greeting = "Bonjour";
-            break;
-        case "es":
-            greeting = "Hola";
-            break;
-        default: //By default, I will set it to english greeting
-            greeting = "Hello";
-            break;
-    }
+class Greetings extends React.Component {
+    
+  traslation(langChoice) {
+    let options = {
+      de: 'Hallo',
+      fr: 'Bonjour',
+      es: 'Hola',
+      en: 'Hello',
+    };
+    return options[langChoice] || 'The language is unknown to me';
+  }
+
+  render() {
+    const { lang, children } = this.props;
     return (
-        <p>
-            {greeting} {props.children}
-        </p>
-    )
+      <div className='greetings'>
+        <h3>
+          {this.traslation(lang)} {children}
+        </h3>
+      </div>
+    );
+  }
 }
 
-export default Greetings
+export default Greetings;
